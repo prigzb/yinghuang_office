@@ -23,7 +23,7 @@
                 </div>    
               </div>
           </router-link>
-          <router-link to="/xieyijiudian">         
+          <router-link to="/zhedie">         
               <div class="box-item box3">
                 <div class="box_container">
                   <div class="round_container round3">
