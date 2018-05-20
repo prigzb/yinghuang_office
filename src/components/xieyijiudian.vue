@@ -34,6 +34,18 @@
                   </el-table-column>
                 </a>
                 <el-table-column
+                  prop="linkman"
+                  label="客房价格"
+                  width="200">
+                </el-table-column>
+                <a href="tel:phone">
+                  <el-table-column
+                    prop="phone"
+                    label="总机"
+                    width="150">
+                  </el-table-column>
+                </a>
+                <el-table-column
                   prop="address"
                   label="地址"
                   width="200">

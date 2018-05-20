@@ -1,7 +1,14 @@
 <template>
   <div class="gzbfdc">
     <div class="container">
-        <my-video :sources="video.sources" :options="video.options" style="padding-top:20px;"></my-video>
+        <!-- <my-video :sources="video.sources" :options="video.options" style="padding-top:20px;"></my-video> -->
+        <div class="carsol">
+            <ic-slider :autoplay="3000">
+              <ic-slider-item v-for="items in images" :key="items.id">
+                <img :src="items.picUrl"/>
+              </ic-slider-item>
+            </ic-slider>
+        </div>
         <div class="box">
           <router-link to="/bangonggaikuang">
               <div class="box-item box1">
@@ -53,7 +60,7 @@
                 </div>    
               </div>
           </router-link>
-          <router-link to="/zhedie">         
+          <router-link to="">         
               <div class="box-item box4">
                 <div class="box_container">
                   <div class="round_container round4">
@@ -96,7 +103,7 @@ export default {
           poster: "http://covteam.u.qiniudn.com/poster.png"
         }
       },
-      list: [
+      images: [
         {
           linkUrl: "http://y.qq.com/w/album.html?albummid=0044K2vN1sT5mE",
           picUrl:
@@ -115,25 +122,12 @@ export default {
           picUrl:
             "http://y.gtimg.cn/music/photo_new/T003R720x288M00000236sfA406cmk.jpg",
           id: 11378
-        },
-        {
-          linkUrl: "https://y.qq.com/msa/218/0_4085.html",
-          picUrl:
-            "http://y.gtimg.cn/music/photo_new/T003R720x288M000001s0BXx3Zxcwb.jpg",
-          id: 11375
-        },
-        {
-          linkUrl:
-            "https://y.qq.com/m/digitalbum/gold/index.html?_video=true&id=2195876&g_f=shoujijiaodian",
-          picUrl:
-            "http://y.gtimg.cn/music/photo_new/T003R720x288M000002cwng4353HKz.jpg",
-          id: 11287
         }
       ]
     };
   },
   components: {
-    myVideo,
+    // myVideo,
     IcSlider,
     IcSliderItem
   },
@@ -186,7 +180,7 @@ li {
   height: 100px;
   border-radius: 50%;
   position: relative;
-  margin: 0 auto;
+  margin: 4px auto;
 }
 .box_container > .round_container > span {
   display: inline-block;
@@ -237,6 +231,7 @@ span[class="icon4"] {
 .round4 {
   background-color: #c7606d;
 }
+
 /* 小草 */
 .botpic {
   background: url("../../static/xiaocao.png") repeat;

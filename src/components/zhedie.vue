@@ -21,6 +21,12 @@
                             <el-form-item label="总机">
                                 <a :href="'tel:'+props.row.phone"><span>{{ props.row.phone }}</span></a>
                             </el-form-item>
+                            <el-form-item label="联系人">
+                                <span>{{ props.row.linkman }}</span>
+                            </el-form-item>
+                            <el-form-item label="联系电话">
+                                <a :href="'tel:'+props.row.linkcall"><span>{{ props.row.linkcall }}</span></a>
+                            </el-form-item>
                             <el-form-item label="地址">
                                 <span>{{ props.row.address }}</span>
                             </el-form-item>
@@ -32,7 +38,8 @@
                 </el-table-column>
                 <el-table-column
                         label="酒店 ID"
-                        prop="id">
+                        prop="id"
+                        width="80">
                 </el-table-column>
                 <el-table-column
                         label="酒店名称"
@@ -65,6 +72,12 @@
                             <el-form-item label="总机">
                                 <a :href="'tel:'+props.row.phone"><span>{{ props.row.phone }}</span></a>
                             </el-form-item>
+                             <el-form-item label="联系人">
+                                <span>{{ props.row.linkman }}</span>
+                            </el-form-item>
+                            <el-form-item label="联系电话">
+                                <a :href="'tel:'+props.row.linkcall"><span>{{ props.row.linkcall }}</span></a>
+                            </el-form-item>
                             <el-form-item label="地址">
                                 <span>{{ props.row.address }}</span>
                             </el-form-item>
@@ -76,7 +89,8 @@
                 </el-table-column>
                 <el-table-column
                         label="酒店 ID"
-                        prop="id">
+                        prop="id"
+                        width="80">
                 </el-table-column>
                 <el-table-column
                         label="酒店名称"
@@ -95,13 +109,26 @@
 .el-table {
   margin: 0 auto !important;
   border: 1px solid black;
+  table-layout: fixed;
 }
+.el-table th{
+    text-align: center;
+    /* width:20%!important; */
+}
+/* .el-table thead tr>th{
+    width:25%;
+} */
+/* .table-fixed {
+    /deep/ .el-table th:nth-child(1){
+        width:20%! important;
+    }
+} */
 .demo-table-expand {
   font-size: 0;
   padding: 13px 14px !important;
 }
 .demo-table-expand label {
-  width: 37%;
+  width: 36%;
   float: left !important;
   color: #99a9bf;
 }
@@ -111,12 +138,19 @@
   width: 100%;
   float: left;
 }
-.el-table_1_column_2 .el-table th {
+/* .el-table_1_column_2 .el-table th {
   text-align: center !important;
   width: 50% !important;
+} */
+.el-table tr th:second-child{
+    width:20%!important;
 }
 .el-table__expanded-cell[class*="cell"] {
-  padding: 10px 20px !important;
+  padding: 5px 10px !important;
+}
+
+table tr td:second-child,table tr th:second-child{
+  width:50px!important;
 }
 </style>
  
