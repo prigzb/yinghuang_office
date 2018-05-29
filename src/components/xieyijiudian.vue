@@ -108,36 +108,40 @@
 
 <script>
 import axios from "axios";
+XuntongJSBridge.call("setWebViewTitle", { title: "协议酒店" });
 export default {
   data() {
     return {
       tableData31: [],
       tableData41: [],
-      gridData: [{
+      gridData: [
+        {
           style: "五星中国风",
           room: "豪华房（大床/双床）",
           price: "1400/1580",
           phone: "010-65052266",
           address: "北京建国门外大街甲一号",
           distance: "1.4公里步行预计21分钟"
-        }, {
+        },
+        {
           style: "五星中国风",
           room: "豪华阁豪华房（行政房大床/双床）",
           price: "1700/1880",
           phone: "010-65052266",
           address: "北京建国门外大街甲一号",
           distance: "1.4公里步行预计21分钟"
-        }]
+        }
+      ]
     };
   },
   methods: {
     arraySpanMethod1({ row, column, rowIndex, columnIndex }) {
       if (columnIndex !== 1 && columnIndex !== 2) {
         console.log(0);
-        if(rowIndex===0){
-          return[2,1]
-        }else if(rowIndex===1){
-          return [0,0]
+        if (rowIndex === 0) {
+          return [2, 1];
+        } else if (rowIndex === 1) {
+          return [0, 0];
         }
         if (rowIndex === 3) {
           return [2, 1];
@@ -196,9 +200,7 @@ export default {
         }
       }
     },
-    arraySpanMethod2({ row, column, rowIndex, columnIndex }) {
-
-    },
+    arraySpanMethod2({ row, column, rowIndex, columnIndex }) {},
     arraySpanMethod_undo({ row, column, rowIndex, columnIndex }) {
       if (columnIndex !== 3 && columnIndex !== 4) {
         console.log(0);
@@ -282,7 +284,7 @@ export default {
         // console.log(response.data.tableData3[0].hotel1)
         // console.log(st);
         this.tableData31 = response.data.tableData3;
-        console.log(this.tableData31[0].hotel1)
+        console.log(this.tableData31[0].hotel1);
         this.tableData41 = response.data.tableData4;
       })
       .catch(error => {
@@ -300,7 +302,7 @@ export default {
   margin: 1% 1%;
   overflow: hidden;
 }
-button{
-  margin:2%!important;
+button {
+  margin: 2% !important;
 }
 </style>

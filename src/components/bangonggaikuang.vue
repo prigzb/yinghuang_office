@@ -1,7 +1,7 @@
 <template>
      <div class="bggk">
-         <img :src="url1" preview="0" preview-text="配套1">
-         <img :src="url2" preview="0" preview-text="配套2">
+         <img v-lazy="item.imgurl" preview="0" preview-text="配套+index" v-for="(item,index) in listimg" :key="item.id">
+         <!-- <img :src="url2" preview="0" preview-text="配套2">
          <img :src="url3" preview="0" preview-text="配套3">
          <img :src="url4" preview="0" preview-text="配套4">
          <img :src="url5" preview="0" preview-text="配套5">
@@ -13,10 +13,11 @@
          <img :src="url11" preview="0" preview-text="配套11">
          <img :src="url12" preview="0" preview-text="配套12">
          <img :src="url13" preview="0" preview-text="配套13">
-         <img :src="url14" preview="0" preview-text="配套14">
+         <img :src="url14" preview="0" preview-text="配套14"> -->
      </div>
 </template>
 <script>
+XuntongJSBridge.call("setWebViewTitle", { title: "办公概况" });
 var img1 = require("../assets/bg1.png");
 var img2 = require("../assets/bg2.png");
 var img3 = require("../assets/bg3.png");
@@ -35,20 +36,64 @@ export default {
   name: "bangonggaikuang",
   data() {
     return {
-      url1: img1,
-      url2: img2,
-      url3: img3,
-      url4: img4,
-      url5: img5,
-      url6: img6,
-      url7: img7,
-      url8: img8,
-      url9: img9,
-      url10: img10,
-      url11: img11,
-      url12: img12,
-      url13: img13,
-      url14: img14
+      listimg: [
+        {
+          imgurl: img1,
+          id: 1
+        },
+        {
+          imgurl: img2,
+          id: 2
+        },
+        {
+          imgurl: img3,
+          id: 3
+        },
+        {
+          imgurl: img4,
+          id: 4
+        },
+        {
+          imgurl: img5,
+          id: 5
+        },
+        {
+          imgurl: img6,
+          id: 6
+        },
+        {
+          imgurl: img7,
+          id: 7
+        },
+        {
+          imgurl: img8,
+          id: 8
+        },
+        {
+          imgurl: img9,
+          id: 9
+        },
+        {
+          imgurl: img10,
+          id: 10
+        },
+        {
+          imgurl: img11,
+          id: 11
+        },
+        {
+          imgurl: img12,
+          id: 12
+        },
+        {
+          imgurl: img13,
+          id: 13
+        },
+        {
+          imgurl: img14,
+          id: 14
+        }
+      ]
     };
   }
 };

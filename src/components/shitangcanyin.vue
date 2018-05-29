@@ -8,6 +8,7 @@
 </template>
 
 <script>
+XuntongJSBridge.call("setWebViewTitle", { title: "食堂餐饮" });
 var img1 = require("../assets/food1.png");
 var img2 = require("../assets/food2.png");
 export default {

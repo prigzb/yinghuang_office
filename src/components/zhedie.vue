@@ -111,9 +111,9 @@
   border: 1px solid black;
   table-layout: fixed;
 }
-.el-table th{
-    text-align: center;
-    /* width:20%!important; */
+.el-table th {
+  text-align: center;
+  /* width:20%!important; */
 }
 /* .el-table thead tr>th{
     width:25%;
@@ -142,20 +142,22 @@
   text-align: center !important;
   width: 50% !important;
 } */
-.el-table tr th:second-child{
-    width:20%!important;
+.el-table tr th:second-child {
+  width: 20% !important;
 }
 .el-table__expanded-cell[class*="cell"] {
   padding: 5px 10px !important;
 }
 
-table tr td:second-child,table tr th:second-child{
-  width:50px!important;
+table tr td:second-child,
+table tr th:second-child {
+  width: 50px !important;
 }
 </style>
  
 <script>
 import axios from "axios";
+XuntongJSBridge.call("setWebViewTitle", { title: "协议酒店" });
 export default {
   data() {
     return {

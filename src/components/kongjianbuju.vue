@@ -50,6 +50,7 @@
 </style>
 
 <script>
+XuntongJSBridge.call("setWebViewTitle", { title: "空间布局" });
 export default {
   name: "kongjianbuju",
   methods: {
