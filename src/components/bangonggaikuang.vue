@@ -1,19 +1,6 @@
 <template>
      <div class="bggk">
          <img v-lazy="item.imgurl" preview="0" preview-text="配套+index" v-for="(item,index) in listimg" :key="item.id">
-         <!-- <img :src="url2" preview="0" preview-text="配套2">
-         <img :src="url3" preview="0" preview-text="配套3">
-         <img :src="url4" preview="0" preview-text="配套4">
-         <img :src="url5" preview="0" preview-text="配套5">
-         <img :src="url6" preview="0" preview-text="配套6">
-         <img :src="url7" preview="0" preview-text="配套7">
-         <img :src="url8" preview="0" preview-text="配套8">
-         <img :src="url9" preview="0" preview-text="配套9">
-         <img :src="url10" preview="0" preview-text="配套10">
-         <img :src="url11" preview="0" preview-text="配套11">
-         <img :src="url12" preview="0" preview-text="配套12">
-         <img :src="url13" preview="0" preview-text="配套13">
-         <img :src="url14" preview="0" preview-text="配套14"> -->
      </div>
 </template>
 <script>
