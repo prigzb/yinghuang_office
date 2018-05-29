@@ -51,20 +51,20 @@
               </div>
           </router-link>
           <router-link to="/shitangcanyin">         
-              <div class="box-item box4">
+              <div class="box-item box5">
                 <div class="box_container">
-                  <div class="round_container round4">
-                    <span class="icon4"></span>
+                  <div class="round_container round5">
+                    <span class="icon5"></span>
                   </div>
                   <p>食堂餐饮</p>
                 </div>    
               </div>
           </router-link>
           <router-link to="">         
-              <div class="box-item box4">
+              <div class="box-item box6">
                 <div class="box_container">
-                  <div class="round_container round4">
-                    <span class="icon4"></span>
+                  <div class="round_container round6">
+                    <span class="icon6"></span>
                   </div>
                   <p>待开发...</p>
                 </div>    
@@ -82,9 +82,9 @@ import myVideo from "vue-video";
 import IcSlider from "./comps/slider";
 import IcSliderItem from "./comps/slider-item";
 
-const img1 = require("../assets/pic1.jpg");
-const img2 = require("../assets/pic2.jpg");
-const img3 = require("../assets/pic3.jpg");
+const img1 = require("../assets/huiyishi.jpg");
+const img2 = require("../assets/gongwei.jpg");
+const img3 = require("../assets/daping.jpg");
 // const movie1= require("../../static/oceans.mp4")
 export default {
   name: "HelloWorld",
@@ -106,21 +106,17 @@ export default {
       images: [
         {
           linkUrl: "http://y.qq.com/w/album.html?albummid=0044K2vN1sT5mE",
-          picUrl:
-            "http://y.gtimg.cn/music/photo_new/T003R720x288M000001YCZlY3aBifi.jpg",
+          picUrl: img1,
           id: 11351
         },
         {
-          linkUrl:
-            "https://y.qq.com/m/digitalbum/gold/index.html?_video=true&id=2197820&g_f=shoujijiaodian",
-          picUrl:
-            "http://y.gtimg.cn/music/photo_new/T003R720x288M000004ckGfg3zaho0.jpg",
+          linkUrl: "",
+          picUrl: img2,
           id: 11372
         },
         {
           linkUrl: "http://y.qq.com/w/album.html?albummid=001tftZs2RX1Qz",
-          picUrl:
-            "http://y.gtimg.cn/music/photo_new/T003R720x288M00000236sfA406cmk.jpg",
+          picUrl: img3,
           id: 11378
         }
       ]
@@ -205,7 +201,13 @@ span[class="icon3"] {
   background: url("../assets/hotel.png") no-repeat;
 }
 span[class="icon4"] {
-  background: url("../assets/office.png") no-repeat;
+  background: url("../assets/buju.png") no-repeat;
+}
+span[class="icon5"] {
+  background: url("../assets/canyin.png") no-repeat;
+}
+span[class="icon6"] {
+  background: url("../assets/kaifa.png") no-repeat;
 }
 .box1 {
   background-color: #c3d5ea;
@@ -217,7 +219,13 @@ span[class="icon4"] {
   background-color: #efd3bc;
 }
 .box4 {
-  background-color: #e8d3dc;
+  background-color: #f79fc5;
+}
+.box5 {
+  background-color: #88f173;
+}
+.box6 {
+  background-color: #6692f3;
 }
 .round1 {
   background-color: #3a75ea;
@@ -230,6 +238,12 @@ span[class="icon4"] {
 }
 .round4 {
   background-color: #c7606d;
+}
+.round5 {
+  background-color: grey;
+}
+.round6 {
+  background-color: #da85dd;
 }
 
 /* 小草 */
